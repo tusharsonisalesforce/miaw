@@ -1,4 +1,5 @@
-<body>
+<html>
+	<body>
 <script type='text/javascript'>
 function initEmbeddedMessaging() {
 	try {
@@ -19,3 +20,4 @@ function initEmbeddedMessaging() {
 </script>
 <script type='text/javascript' src='https://storm-403667cf952fd5.my.site.com/ESWMIAW1735551684409/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
+</html>
