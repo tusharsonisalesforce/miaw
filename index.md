@@ -13,6 +13,12 @@ embeddedservice_bootstrap.init(
 		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
 	}
 );
+
+embeddedservice_bootstrap.userVerificationAPI.setUserIdentity({
+            fieldName: "Customer_Hash",
+            value: "1234567890"
+        });
+	
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
 }
