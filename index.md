@@ -5,6 +5,10 @@ function initEmbeddedMessaging() {
 try {
 embeddedservice_bootstrap.settings.language = 'en_US';
 
+window.addEventListener("onEmbeddedMessagingReady", () => {
+    embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
+});
+
 embeddedservice_bootstrap.init(
 	'00D0p0000008ecL',
 	'Agentforce_Messaging_Deployment',
