@@ -10,16 +10,17 @@ embeddedservice_bootstrap.init(
 	'Agentforce_Messaging_Deployment',
 	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWAgentforceMessagingD1737696200985',
 	{
-		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com',
-		entityFieldMaps: [
-		{
-			fieldName: 'Customer_Hash',
-                        label: 'Customer Hash',
-                        value: '1234567890'
-                    }
-                ]
+		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
 	}
 );
+embeddedservice_bootstrap.prechatAPI.setPrechatFields([
+            {
+                label: "Customer_Hash",
+                value: "1234567890",
+                transcriptFields: ["Customer_Hash__c"],
+                displayToAgent: true
+            }
+        ]);
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
 }
