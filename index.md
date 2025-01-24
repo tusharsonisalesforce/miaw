@@ -13,14 +13,9 @@ embeddedservice_bootstrap.init(
 		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
 	}
 );
-embeddedservice_bootstrap.prechatAPI.setPrechatFields([
-            {
-                label: "Customer_Hash",
-                value: "1234567890",
-                transcriptFields: ["Customer_Hash"],
-                displayToAgent: true
-            }
-        ]);
+embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            "Customer_Hash__c": "1234567890"
+        });
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
 }
