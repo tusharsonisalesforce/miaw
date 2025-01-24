@@ -14,7 +14,7 @@ embeddedservice_bootstrap.init(
 	}
 );
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-            "Customer_Hash__c": "1234567890"
+            "Customer_Hash": "1234567890"
         });
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
