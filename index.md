@@ -17,7 +17,7 @@ embeddedservice_bootstrap.prechatAPI.setPrechatFields([
             {
                 label: "Customer_Hash",
                 value: "1234567890",
-                transcriptFields: ["Customer_Hash__c"],
+                transcriptFields: ["Customer_Hash"],
                 displayToAgent: true
             }
         ]);
