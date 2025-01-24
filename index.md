@@ -10,7 +10,14 @@ embeddedservice_bootstrap.init(
 	'Agentforce_Messaging_Deployment',
 	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWAgentforceMessagingD1737696200985',
 	{
-		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
+		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com',
+		entityFieldMaps: [
+		{
+			fieldName: 'Customer_Hash',
+                        label: 'Customer Hash',
+                        value: '1234567890'
+                    }
+                ]
 	}
 );
 } catch (err) {
