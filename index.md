@@ -15,7 +15,7 @@ embeddedservice_bootstrap.init(
 );
 
 embeddedservice_bootstrap.userVerificationAPI.setUserIdentity({
-            fieldName: "Customer_Hash",
+            fieldName: "Customer_Hash__c",
             value: "1234567890"
         });
 	
