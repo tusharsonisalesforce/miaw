@@ -14,8 +14,8 @@ embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "
 
 embeddedservice_bootstrap.init(
 	'00D0p0000008ecL',
-	'MIAW_Croma_Deployment',
-	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWMIAWCromaDeployment1738054455202',
+	'Agentforce_GitHub',
+	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWAgentforceGitHub1738318256114',
 	{
 		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
 	}
