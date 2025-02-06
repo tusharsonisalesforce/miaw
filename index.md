@@ -12,6 +12,24 @@
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
 });
 
+window.addEventListener("onEmbeddedMessagingConversationClosed", () => {
+  console.log("Received the onEmbeddedMessagingConversationClosed event.");
+  // Send your identity token to Salesforce.
+  embeddedservice_bootstrap.userVerificationAPI
+  .clearSession()
+  .then(() => {
+    // TO DO: Handle success
+    console.log("Success | onEmbeddedMessagingConversationClosed event.");
+  })
+  .catch((error) => {
+    // TO DO: Handle error
+    console.log("Error | onEmbeddedMessagingConversationClosed event.");
+  })
+  .finally(() => {
+    // TO DO: Handle regardless of result
+});
+});
+
 embeddedservice_bootstrap.init(
 	'00D0p0000008ecL',
 	'Agentforce_GitHub',
