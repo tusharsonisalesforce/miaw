@@ -7,7 +7,9 @@
 <script type='text/javascript'>
 
 	function onUserLogout() {
+		
 	    console.log('inside agentforce userlogout');
+		location.reload();
         embeddedservice_bootstrap.userVerificationAPI
           .clearSession()
           .then(() => {
