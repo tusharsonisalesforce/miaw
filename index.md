@@ -9,11 +9,11 @@
 	function onUserLogout() {
 		
 	    console.log('inside agentforce userlogout');
-		location.reload();
         embeddedservice_bootstrap.userVerificationAPI
           .clearSession()
           .then(() => {
 		  console.log('clearSession Success');
+		  location.reload();
             // Add actions to run after the session is cleared successfully.
           })
           .catch((error) => {
