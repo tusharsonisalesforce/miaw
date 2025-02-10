@@ -2,11 +2,11 @@
 <body>
 
 // Create a custom button or invitation to launch the web chat client.
-<button id="logoutButton" label="logout" onclick="onUserLogout()">Logout</button>
+<button id="logoutButton" onclick="onUserLogout()">Logout</button>
+ 
+<script type='text/javascript'>
 
-// Call Launch Chat API.
-<script>
-    function onUserLogout() {
+	function onUserLogout() {
 	    console.log('inside agentforce userlogout');
         embeddedservice_bootstrap.userVerificationAPI
           .clearSession()
@@ -25,9 +25,7 @@
       
         // Add code to perform any other logout actions.
     }
-</script>
- 
-<script type='text/javascript'>
+	
 	function initEmbeddedMessaging() {
 		try {
 		embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
