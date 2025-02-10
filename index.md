@@ -35,9 +35,7 @@
 
 // Send data to Salesforce
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
-});
-
-window.addEventListener("onEmbeddedMessagingConversationClosed", () => {
+	  window.addEventListener("onEmbeddedMessagingConversationClosed", () => {
   console.log("Received the onEmbeddedMessagingConversationClosed event.");
   // Send your identity token to Salesforce.
   embeddedservice_bootstrap.userVerificationAPI
@@ -52,6 +50,7 @@ window.addEventListener("onEmbeddedMessagingConversationClosed", () => {
   })
   .finally(() => {
     // TO DO: Handle regardless of result
+});
 });
 });
 
