@@ -13,7 +13,7 @@
           .clearSession()
           .then(() => {
 		  console.log('clearSession Success');
-		  location.reload();
+		  //location.reload();
             // Add actions to run after the session is cleared successfully.
           })
           .catch((error) => {
