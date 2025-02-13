@@ -57,6 +57,6 @@ console.error('Error loading Embedded Messaging: ', err);
 }
 	};
 </script>
-<script type='text/javascript' src='https://infinitiretaillimited--uat.sandbox.my.site.com/ESWMIAWCromaDeployment1738054455202/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://storm-403667cf952fd5.my.site.com/ESWMIAW1735553027652/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
