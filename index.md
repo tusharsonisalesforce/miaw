@@ -1,31 +1,57 @@
 <html>
 <body>
-	<script type='text/javascript'>
+
+// Create a custom button or invitation to launch the web chat client.
+<button id="logoutButton" onclick="onUserLogout()">Logout</button>
+ 
+<script type='text/javascript'>
+
+	function onUserLogout() {
+		
+	    console.log('inside agentforce userlogout');
+        embeddedservice_bootstrap.userVerificationAPI
+          .clearSession()
+          .then(() => {
+		  console.log('clearSession Success');
+		  //location.reload();
+            // Add actions to run after the session is cleared successfully.
+          })
+          .catch((error) => {
+		  console.log('clearSession Error');
+            // Add actions to run after clearing the session fails.
+          })
+          .finally(() => {
+            // Add actions to run whether the chat client launches
+            // successfully or not.
+          });
+      
+        // Add code to perform any other logout actions.
+    }
+	
 	function initEmbeddedMessaging() {
 		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+		embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-   window.addEventListener("onEmbeddedMessagingReady", () => {
-	console.log("Received the onEmbeddedMessagingReady event.");
-	embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
-		identityTokenType: "JWT",
-		identityToken: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyMzQ1In0.eyJzdWIiOiJ1c2VyMTAiLCJpc3MiOiJ0ZXN0SXNzdWVyIiwiZXhwIjoiNjAwMCJ9.HDC9A7fbv4BLoNqRV9rITUACuXOjFq5HpD33CawhnnGMWOtcR_i5zIqnno72i4-q3FBeSPm75gasTcdJ4shARCL_i5dCyjl0SQ91Ibj9OmWYUyZ4Y94nMYD_Bd4q-vAeX-btg-Alb7MbBF-OvkyuXM39YZVvTPW7jXoDChAhzCzoLAYSR5cqw0Py4dd4s7hAWCJDQkhZ0Yfrzx6x3ZVMljIu2XXwBvLC6UQqWYfM1TBKG7eEcG12PCbrTsMcOFYJWhLrMryYDhUV6XdNc_E_38Au7w3zYCL4DGbQXkCMFTOQXHuWEoJ2SZDZae3dQa-ZDkACXMhkNfAmdnrssQfFOQ"
-	});
+  window.addEventListener("onEmbeddedMessagingReady", () => {
+    console.log("Received the onEmbeddedMessagingReady event…");
+
+// Send data to Salesforce
+embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
 });
 
 embeddedservice_bootstrap.init(
-	'00DWs000007IsfR',
-	'MIAW',
-	'https://storm-403667cf952fd5.my.site.com/ESWMIAW1735553027652',
+	'00D0p0000008ecL',
+	'Agentforce_GitHub',
+	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWAgentforceGitHub1738318256114',
 	{
-		scrt2URL: 'https://storm-403667cf952fd5.my.salesforce-scrt.com'
+		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
 	}
 );
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
 }
-};
+	};
 </script>
-<script type='text/javascript' src='https://storm-403667cf952fd5.my.site.com/ESWMIAW1735553027652/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src='https://infinitiretaillimited--uat.sandbox.my.site.com/ESWMIAWCromaDeployment1738054455202/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
 </html>
