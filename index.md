@@ -9,7 +9,20 @@
 	function onUserLogout() {
 		
 	    console.log('inside agentforce userlogout');
-	embeddedservice_bootstrap.utilAPI.hideChatButton();
+	embeddedservice_bootstrap.userVerificationAPI
+          .clearSession()
+          .then(() => {
+            console.log('clearSession Success');
+            // Add actions to run after the session is cleared successfully.
+          })
+          .catch((error) => {
+            console.log('clearSession Error');
+            // Add actions to run after clearing the session fails.
+          })
+          .finally(() => {
+            // Add actions to run whether the chat client launches
+            // successfully or not.
+          });
       
         // Add code to perform any other logout actions.
     }
@@ -20,7 +33,6 @@
 
   window.addEventListener("onEmbeddedMessagingReady", () => {
     console.log("Received the onEmbeddedMessagingReady event…");
-//embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 
 // Send data to Salesforce
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
