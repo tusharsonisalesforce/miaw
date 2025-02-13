@@ -36,7 +36,7 @@
     console.log("Received the onEmbeddedMessagingReady event…");
 
 // Send data to Salesforce
-embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
+//embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Service" : "11098324"});
 
 embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
         identityTokenType: "JWT",
