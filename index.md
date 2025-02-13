@@ -37,6 +37,11 @@
 
 // Send data to Salesforce
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
+
+embeddedservice_bootstrap.userVerificationAPI.setIdentityToken({
+        identityTokenType: "JWT",
+        identityToken: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjEyMzQ1In0.eyJzdWIiOiJ1c2VyMSIsImlzcyI6InRlc3RJc3N1ZXIiLCJleHAiOiI2MDAwIn0.Wag70vnLt_ZrxxS2Bd6I-0eyJPAsG-tSAUUuj4FF2mzGHf4PZ4kNx38FX2M7-DRMd72LMxDzw8kRUcFp7B8Df4_9ahWKKudouy4fONt_XX32bBR5sl7L8frZ6S2BHuI8melR_2Pa6rgeoH3nwz1eLv4f0JYLDtks7vc33lV_c-C_tCpXStmhT4v94hDi-xZUS-PKMEycfViUl5ZAXiSERHrEpPAFDHm23h3jrg_9sboEH7OU5HxOaK39nxA_swB1BCgq9Qb45XybSsLdKvP9k_RPzUckW_Gct41-abO9RSHqf4RsUZabO2mszAB8EsAR3a-T-GPrJjsHgBuJfwAg6A'
+      });
 });
 
 embeddedservice_bootstrap.init(
