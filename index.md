@@ -20,7 +20,7 @@
 
   window.addEventListener("onEmbeddedMessagingReady", () => {
     console.log("Received the onEmbeddedMessagingReady event…");
-embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
+//embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
 
 // Send data to Salesforce
 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "11098324"});
