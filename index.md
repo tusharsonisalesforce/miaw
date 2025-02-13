@@ -40,13 +40,13 @@ embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Customer_Hash" : "
 });
 
 embeddedservice_bootstrap.init(
-	'00D0p0000008ecL',
-	'Agentforce_GitHub',
-	'https://infinitiretaillimited--uat.sandbox.my.site.com/ESWAgentforceGitHub1738318256114',
-	{
-		scrt2URL: 'https://infinitiretaillimited--uat.sandbox.my.salesforce-scrt.com'
-	}
-);
+		'00DWs000007IsfR',
+		'MIAW',
+		'https://storm-403667cf952fd5.my.site.com/ESWMIAW1735553027652',
+		{
+			scrt2URL: 'https://storm-403667cf952fd5.my.salesforce-scrt.com'
+		}
+	);
 } catch (err) {
 console.error('Error loading Embedded Messaging: ', err);
 }
