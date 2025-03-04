@@ -1,7 +1,6 @@
 <html>
 <body>
 
-// Create a custom button or invitation to launch the web chat client.
 <button id="logoutButton" onclick="onUserLogout()">Logout</button>
  
 <script type='text/javascript'>
