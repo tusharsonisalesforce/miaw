@@ -2,6 +2,7 @@
 <body>
 
 <button id="logoutButton" onclick="onUserLogout()">Logout</button>
+<button id="launchChat" onclick="initEmbeddedMessaging()">Launch Chat</button>
  
 <script type='text/javascript'>
 
